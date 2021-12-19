@@ -1,0 +1,28 @@
+*{
+    font-family: sans-serif;
+}
+.products{
+    width: 100%;
+    height: auto;
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.product{
+    width: 29%;
+    margin: 2%;
+    margin-left: 3%;
+    background-color: gray;
+}
+.product img{
+    width: 100%;
+    height: 200px;
+}
+.c_title{
+    text-decoration: none;
+}
+.c_title:hover{
+    color: red;
+    text-decoration: underline;
+}

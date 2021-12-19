@@ -1,0 +1,23 @@
+{% extends '_base.html' %}
+{% load socialaccount %}
+{% load static %}
+{% block css %} <link rel="stylesheet" href="{% static 'css/products.css' %}"> {% endblock %}
+{% block title %} Home Page {% endblock %}
+{% block content %}
+    <div class="products">
+        {% for product in products %}
+            <div class="product card">
+                <img src="{{ product.thumbnail.url }}" alt="{{product.product.name}}" class="rounded float-start">
+                <div class="card-body">
+                    <p class="title">
+                        <a href="#" class="c_title">
+                            {{product.product.name}}
+                        </a>
+                    </p>
+                    <p>Puan: {{product.point}}</p>
+                    <p>{{product.product.price}} TL</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

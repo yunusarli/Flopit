@@ -1,0 +1,39 @@
+{% extends '_base.html' %}
+{% load static %}
+{% load i18n %}
+{% block css %} <link rel="stylesheet" href="{% static 'css/social_login.css' %}"> {% endblock %}
+{% block title %} Login {% endblock %}
+  {% block content %}
+    {% if messages %}
+  
+    <div>
+      <strong>Messages:</strong>
+      <ul>
+        {% for message in messages %}
+        <li>{{message}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <div class="all_links">
+      <ul>
+        {% if user.is_authenticated %}
+        
+        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
+        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
+        {% else %}
+        <li><a href="{% url 'account_login' %}"><p>Login your account</p></a></li>
+        <li><a href="{% url 'account_signup' %}"><p>Have not any account?</p></a></li>
+        {% endif %}
+      </ul>
+    </div>
+
+    <div class="google">
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-success">{% trans "Continue With Google" %}</button>
+        </form>
+    </div>
+
+ {% endblock %}

@@ -1,0 +1,10 @@
+.all_links, .or, .google{
+    width: 100%;
+    height: auto;
+    padding: 3% 10%;
+}
+
+input{
+    width: 100%;
+    background-color: blue;
+}

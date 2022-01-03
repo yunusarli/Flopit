@@ -116,11 +116,11 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'FlopitEcommerce',
+        'NAME': 'database_name',
 
-        'USER': 'postgres',
+        'USER': 'username',
 
-        'PASSWORD': 'yunusarli',
+        'PASSWORD': 'password',
 
         'HOST': '127.0.0.1',
 
